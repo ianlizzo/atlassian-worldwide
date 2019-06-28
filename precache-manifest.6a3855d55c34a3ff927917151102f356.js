@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fd805aa5cfa4165dda7bba6d432a03c1",
+    "revision": "41b856e77ef76cabcf2f5b79a2751840",
     "url": "/atlassian-worldwide/index.html"
   },
   {
-    "revision": "a956c274660ed59424f0",
+    "revision": "42261e4103e2b3258007",
     "url": "/atlassian-worldwide/static/css/2.22d6b5ec.chunk.css"
   },
   {
-    "revision": "568f669079df0870dd69",
+    "revision": "3647a1e18766bc5ebf16",
     "url": "/atlassian-worldwide/static/css/main.b7cdcbd7.chunk.css"
   },
   {
-    "revision": "a956c274660ed59424f0",
-    "url": "/atlassian-worldwide/static/js/2.1074fbe9.chunk.js"
+    "revision": "42261e4103e2b3258007",
+    "url": "/atlassian-worldwide/static/js/2.87752197.chunk.js"
   },
   {
-    "revision": "568f669079df0870dd69",
-    "url": "/atlassian-worldwide/static/js/main.92065151.chunk.js"
+    "revision": "3647a1e18766bc5ebf16",
+    "url": "/atlassian-worldwide/static/js/main.f7ec239a.chunk.js"
   },
   {
     "revision": "b4ec6ae4ed003563f9ad",
