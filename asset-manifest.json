@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/atlassian-worldwide/static/css/main.88dd9740.chunk.css",
-    "main.js": "/atlassian-worldwide/static/js/main.2e1aff6a.chunk.js",
-    "main.js.map": "/atlassian-worldwide/static/js/main.2e1aff6a.chunk.js.map",
+    "main.js": "/atlassian-worldwide/static/js/main.8fcb5067.chunk.js",
+    "main.js.map": "/atlassian-worldwide/static/js/main.8fcb5067.chunk.js.map",
     "runtime~main.js": "/atlassian-worldwide/static/js/runtime~main.7d1a1058.js",
     "runtime~main.js.map": "/atlassian-worldwide/static/js/runtime~main.7d1a1058.js.map",
     "static/css/2.22d6b5ec.chunk.css": "/atlassian-worldwide/static/css/2.22d6b5ec.chunk.css",
     "static/js/2.d0035898.chunk.js": "/atlassian-worldwide/static/js/2.d0035898.chunk.js",
     "static/js/2.d0035898.chunk.js.map": "/atlassian-worldwide/static/js/2.d0035898.chunk.js.map",
     "index.html": "/atlassian-worldwide/index.html",
-    "precache-manifest.e9219f1d6cd2e24ad2c7cb656dab4d5b.js": "/atlassian-worldwide/precache-manifest.e9219f1d6cd2e24ad2c7cb656dab4d5b.js",
+    "precache-manifest.462e24b1be7178cd3d7656ce0f73fc3a.js": "/atlassian-worldwide/precache-manifest.462e24b1be7178cd3d7656ce0f73fc3a.js",
     "service-worker.js": "/atlassian-worldwide/service-worker.js",
     "static/css/2.22d6b5ec.chunk.css.map": "/atlassian-worldwide/static/css/2.22d6b5ec.chunk.css.map",
     "static/css/main.88dd9740.chunk.css.map": "/atlassian-worldwide/static/css/main.88dd9740.chunk.css.map",
@@ -22,6 +22,7 @@
     "static/media/SF.png": "/atlassian-worldwide/static/media/SF.74e665a6.png",
     "static/media/Sydney.png": "/atlassian-worldwide/static/media/Sydney.4d8da4e5.png",
     "static/media/YOKOHAMA.png": "/atlassian-worldwide/static/media/YOKOHAMA.2962b5e3.png",
+    "static/media/atlassian-supreme.png": "/atlassian-worldwide/static/media/atlassian-supreme.5961730d.png",
     "static/media/logo.svg": "/atlassian-worldwide/static/media/logo.5d5d9eef.svg"
   }
 }
