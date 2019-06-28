@@ -24,6 +24,7 @@ import sy from "../images/Sydney.png";
 import yk from "../images/YOKOHAMA.png";
 import ReactModal from "react-modal";
 import { markers } from "./markers";
+import AspectRatio from "react-aspect-ratio";
 import {
   scrollStyles,
   scrollText,
@@ -152,15 +153,18 @@ class Map extends Component {
             src={sf}
             style={{
               width: "76%",
-              maxWidth: "100%",
+              //   maxWidth: "100%",
               height: "auto",
+              maxHeight: "100%",
               marginRight: 20,
+              //   display: "flex",
             }}
             className="sf"
             ref={section => {
               this.Sf = section;
             }}
           />
+
           <p style={imageText}>SAN FRANCISCO</p>
         </Row>
 
