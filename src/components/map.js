@@ -150,7 +150,12 @@ class Map extends Component {
         <Row xs end="xs">
           <img
             src={sf}
-            style={{ width: "76%", height: "auto", marginRight: 20 }}
+            style={{
+              width: "76%",
+              maxWidth: "100%",
+              height: "auto",
+              marginRight: 20,
+            }}
             className="sf"
             ref={section => {
               this.Sf = section;
@@ -161,13 +166,23 @@ class Map extends Component {
 
         <Row xs end="xs">
           <img
-            style={{ width: "76%", height: "auto", marginRight: 20 }}
+            style={{
+              width: "76%",
+              maxWidth: "100%",
+              height: "auto",
+              marginRight: 20,
+            }}
             className="mv"
             ref={section => {
               this.Mv = section;
             }}
             src={mt}
-            style={{ width: "76%", height: "auto", marginRight: 20 }}
+            style={{
+              width: "76%",
+              maxWidth: "100%",
+              height: "auto",
+              marginRight: 20,
+            }}
           />
           <p style={imageText}>MOUNTAIN VIEW</p>
         </Row>
@@ -178,7 +193,12 @@ class Map extends Component {
               this.At = section;
             }}
             src={at}
-            style={{ width: "76%", height: "auto", marginRight: 20 }}
+            style={{
+              width: "76%",
+              maxWidth: "100%",
+              height: "auto",
+              marginRight: 20,
+            }}
           />
           <p style={imageText}>AUSTIN</p>
         </Row>
@@ -189,7 +209,12 @@ class Map extends Component {
               this.Ny = section;
             }}
             src={ny}
-            style={{ width: "76%", height: "auto", marginRight: 20 }}
+            style={{
+              width: "76%",
+              maxWidth: "100%",
+              height: "auto",
+              marginRight: 20,
+            }}
           />
           <p style={imageText}>NEW YORK CITY</p>
         </Row>
@@ -200,7 +225,12 @@ class Map extends Component {
               this.Mn = section;
             }}
             src={mn}
-            style={{ width: "76%", height: "auto", marginRight: 20 }}
+            style={{
+              width: "76%",
+              maxWidth: "100%",
+              height: "auto",
+              marginRight: 20,
+            }}
           />
           <p style={imageText}>MANILA</p>
         </Row>
@@ -211,7 +241,12 @@ class Map extends Component {
               this.Sy = section;
             }}
             src={sy}
-            style={{ width: "76%", height: "auto", marginRight: 20 }}
+            style={{
+              width: "76%",
+              maxWidth: "100%",
+              height: "auto",
+              marginRight: 20,
+            }}
           />
           <p style={imageText}>SYDNEY</p>
         </Row>
@@ -222,7 +257,12 @@ class Map extends Component {
               this.Bg = section;
             }}
             src={bg}
-            style={{ width: "76%", height: "auto", marginRight: 20 }}
+            style={{
+              width: "76%",
+              maxWidth: "100%",
+              height: "auto",
+              marginRight: 20,
+            }}
           />
           <p style={imageText}>BENGALURU</p>
         </Row>
@@ -233,7 +273,12 @@ class Map extends Component {
               this.Am = section;
             }}
             src={am}
-            style={{ width: "76%", height: "auto", marginRight: 20 }}
+            style={{
+              width: "76%",
+              maxWidth: "100%",
+              height: "auto",
+              marginRight: 20,
+            }}
           />
           <p style={imageText}>AMSTERDAM</p>
         </Row>
@@ -244,7 +289,12 @@ class Map extends Component {
               this.Yk = section;
             }}
             src={yk}
-            style={{ width: "76%", height: "auto", marginRight: 20 }}
+            style={{
+              width: "76%",
+              maxWidth: "100%",
+              height: "auto",
+              marginRight: 20,
+            }}
           />
           <p style={imageText}>YOKOHAMA</p>
         </Row>
