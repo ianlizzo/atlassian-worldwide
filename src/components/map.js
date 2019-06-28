@@ -298,7 +298,7 @@ class Map extends Component {
                     style={mapStyle}
                   >
                     <ZoomableGroup center={[x, y]} zoom={zoom}>
-                      <Geographies geography="/static/world-110m.json">
+                      <Geographies geography="https://raw.githubusercontent.com/ianlizzo/atlassian-worldwide/master/public/static/world-110m.json">
                         {(geographies, projection) =>
                           geographies.map(
                             (geography, i) =>
