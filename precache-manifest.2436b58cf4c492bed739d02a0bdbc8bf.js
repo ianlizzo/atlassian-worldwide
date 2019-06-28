@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "41b856e77ef76cabcf2f5b79a2751840",
+    "revision": "c738b1a5a3e54b56ac5b4cb7f340620d",
     "url": "/atlassian-worldwide/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/atlassian-worldwide/static/css/2.22d6b5ec.chunk.css"
   },
   {
-    "revision": "3647a1e18766bc5ebf16",
-    "url": "/atlassian-worldwide/static/css/main.b7cdcbd7.chunk.css"
+    "revision": "2d39561a23948a7dcecd",
+    "url": "/atlassian-worldwide/static/css/main.15094453.chunk.css"
   },
   {
     "revision": "42261e4103e2b3258007",
     "url": "/atlassian-worldwide/static/js/2.87752197.chunk.js"
   },
   {
-    "revision": "3647a1e18766bc5ebf16",
-    "url": "/atlassian-worldwide/static/js/main.f7ec239a.chunk.js"
+    "revision": "2d39561a23948a7dcecd",
+    "url": "/atlassian-worldwide/static/js/main.234b4ecb.chunk.js"
   },
   {
     "revision": "b4ec6ae4ed003563f9ad",

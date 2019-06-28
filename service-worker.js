@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/atlassian-worldwide/precache-manifest.6a3855d55c34a3ff927917151102f356.js"
+  "/atlassian-worldwide/precache-manifest.2436b58cf4c492bed739d02a0bdbc8bf.js"
 );
 
 self.addEventListener('message', (event) => {
