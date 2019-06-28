@@ -1,0 +1,11 @@
+@media screen and (min-width: 601px) {
+  .images {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .images {
+    font-size: 12px;
+  }
+}

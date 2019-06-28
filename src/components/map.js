@@ -7,6 +7,8 @@ import {
   Markers,
   Marker,
 } from "react-simple-maps";
+import Modal from "react-responsive-modal";
+
 import { Motion, spring } from "react-motion";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import Sticky from "react-stickynode";
@@ -24,7 +26,7 @@ import sy from "../images/Sydney.png";
 import yk from "../images/YOKOHAMA.png";
 import ReactModal from "react-modal";
 import { markers } from "./markers";
-import AspectRatio from "react-aspect-ratio";
+import "./map.css";
 import {
   scrollStyles,
   scrollText,
@@ -47,39 +49,53 @@ class Map extends Component {
     this.state = {
       center: [0, 20],
       zoom: 1,
-      modal: false,
+      open: false,
+      firstClick: false,
+      city: "",
+      desc: "",
+      img: "",
+      color: "",
     };
-    this.handleZoomIn = this.handleZoomIn.bind(this);
-    this.handleZoomOut = this.handleZoomOut.bind(this);
+
     this.handleCityClick = this.handleCityClick.bind(this);
     this.handleReset = this.handleReset.bind(this);
+    this.onOpenModal = this.onOpenModal.bind(this);
+    this.onCloseModal = this.onCloseModal.bind(this);
+
     // this.showModal = this.showModal.bind(this);
   }
-  handleZoomIn() {
-    this.setState({
-      zoom: this.state.zoom * 2,
-    });
-  }
-  handleZoomOut() {
-    this.setState({
-      zoom: this.state.zoom / 2,
-    });
-  }
+
+  onOpenModal = () => {
+    this.setState({ open: true });
+  };
+
+  onCloseModal = () => {
+    this.setState({ open: false });
+  };
   handleCityClick(city) {
+    if (this.state.firstClick) {
+      this.setState({
+        open: true,
+        city: city.name,
+        desc: city.description,
+        img: city.image,
+        color: city.color,
+      });
+    }
     this.setState({
       zoom: 5,
       center: city.coordinates,
+      firstClick: true,
+      color: city.color,
     });
   }
   handleReset() {
     this.setState({
       center: [0, 20],
       zoom: 1,
+      firstClick: false,
     });
   }
-  //   showModal() {
-  //     this.setState({ modal: true });
-  //   }
 
   renderSideBar() {
     return (
@@ -147,17 +163,15 @@ class Map extends Component {
 
   renderImages() {
     return (
-      <Grid fluid>
+      <Grid className="images" fluid>
         <Row xs end="xs">
           <img
             src={sf}
             style={{
               width: "76%",
-              //   maxWidth: "100%",
-              height: "auto",
+              height: "100%",
               maxHeight: "100%",
               marginRight: 20,
-              //   display: "flex",
             }}
             className="sf"
             ref={section => {
@@ -173,7 +187,7 @@ class Map extends Component {
             style={{
               width: "76%",
               maxWidth: "100%",
-              height: "auto",
+              height: "100%",
               marginRight: 20,
             }}
             className="mv"
@@ -184,7 +198,7 @@ class Map extends Component {
             style={{
               width: "76%",
               maxWidth: "100%",
-              height: "auto",
+              height: "100%",
               marginRight: 20,
             }}
           />
@@ -200,7 +214,7 @@ class Map extends Component {
             style={{
               width: "76%",
               maxWidth: "100%",
-              height: "auto",
+              height: "100%",
               marginRight: 20,
             }}
           />
@@ -216,7 +230,7 @@ class Map extends Component {
             style={{
               width: "76%",
               maxWidth: "100%",
-              height: "auto",
+              height: "100%",
               marginRight: 20,
             }}
           />
@@ -232,7 +246,7 @@ class Map extends Component {
             style={{
               width: "76%",
               maxWidth: "100%",
-              height: "auto",
+              height: "100%",
               marginRight: 20,
             }}
           />
@@ -248,7 +262,7 @@ class Map extends Component {
             style={{
               width: "76%",
               maxWidth: "100%",
-              height: "auto",
+              height: "100%",
               marginRight: 20,
             }}
           />
@@ -264,7 +278,7 @@ class Map extends Component {
             style={{
               width: "76%",
               maxWidth: "100%",
-              height: "auto",
+              height: "100%",
               marginRight: 20,
             }}
           />
@@ -280,7 +294,7 @@ class Map extends Component {
             style={{
               width: "76%",
               maxWidth: "100%",
-              height: "auto",
+              height: "100%",
               marginRight: 20,
             }}
           />
@@ -296,7 +310,7 @@ class Map extends Component {
             style={{
               width: "76%",
               maxWidth: "100%",
-              height: "auto",
+              height: "100%",
               marginRight: 20,
             }}
           />
@@ -307,6 +321,8 @@ class Map extends Component {
   }
 
   render() {
+    const { open } = this.state;
+
     return (
       <div
         className="home"
@@ -319,10 +335,14 @@ class Map extends Component {
           <Row xs>
             {this.renderSideBar()}
             <Col xs>
-              <ReactModal
-                isOpen={this.state.modal}
-                contentLabel="Examplemodal"
-              />
+              <Modal open={open} onClose={this.onCloseModal}>
+                <h2>{this.state.city}</h2>
+                <img
+                  style={{ width: "100%", height: "100%" }}
+                  src={this.state.img}
+                />
+                <p>{this.state.desc}</p>
+              </Modal>
               <Motion
                 defaultStyle={{
                   zoom: 1,
@@ -371,17 +391,24 @@ class Map extends Component {
                           )
                         }
                       </Geographies>
-                      <Markers>
+                      <Markers className="marker">
                         {markers.map((marker, i) => (
                           <Marker
                             onClick={this.handleCityClick}
-                            // onMouseEnter={this.showModal}
                             key={i}
                             marker={marker}
                             style={{
-                              default: { fill: "#FF5722" },
-                              hover: { fill: "#FFFFFF", cursor: "pointer" },
-                              pressed: { fill: "#FF5722" },
+                              outline: "none",
+                              default: { fill: marker.color, outline: "none" },
+                              hover: {
+                                fill: "#FFFFFF",
+                                cursor: "pointer",
+                                outline: "none",
+                              },
+                              pressed: {
+                                fill: "#FF5722",
+                                outline: "none",
+                              },
                             }}
                           >
                             <circle
@@ -389,7 +416,7 @@ class Map extends Component {
                               cy={0}
                               r={5}
                               style={{
-                                stroke: "#0052CC",
+                                stroke: marker.color,
                                 strokeWidth: 3,
                                 opacity: 0.9,
                               }}
@@ -401,6 +428,7 @@ class Map extends Component {
                               style={{
                                 fontFamily: "monospace",
                                 fill: "black",
+                                outline: "none",
                               }}
                             >
                               {marker.name}
@@ -412,7 +440,20 @@ class Map extends Component {
                   </ComposableMap>
                 )}
               </Motion>
-              <Return style={returnStyle} onClick={this.handleReset} />
+              <Col xs>
+                <Return
+                  style={{
+                    color: this.state.color,
+                    cursor: "pointer",
+                    position: "relative",
+                    bottom: 30,
+                    fontFamily: "monospace",
+                    height: 30,
+                    width: 30,
+                  }}
+                  onClick={this.handleReset}
+                />
+              </Col>
             </Col>
           </Row>
         </Grid>

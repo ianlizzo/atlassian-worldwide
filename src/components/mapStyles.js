@@ -10,7 +10,7 @@ export const scrollText = {
 };
 
 export const imageText = {
-  fontSize: 25,
+  //   fontSize: 25,
   textOrientation: "mixed",
   writingMode: "vertical-rl",
   alignSelf: "flex-start",
@@ -46,10 +46,9 @@ export const mapStyle = {
 export const returnStyle = {
   cursor: "pointer",
   position: "relative",
-  bottom: 5,
-  right: 40,
+  bottom: 30,
   fontFamily: "monospace",
   height: 30,
   width: 30,
-  color: "gray",
+  //   color: "#0052CC",
 };
